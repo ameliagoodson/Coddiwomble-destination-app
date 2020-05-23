@@ -5,6 +5,7 @@
       "node": true
   },
   "rules": {
+      
       "no-duplicate-case":"error",
       "no-empty":"error",
       "no-extra-semi":"error",
