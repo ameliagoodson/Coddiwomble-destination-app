@@ -5,4 +5,3 @@ $(document).ready(function() {
     $(".member-name").text(data.username);
   });
 });
-m in
