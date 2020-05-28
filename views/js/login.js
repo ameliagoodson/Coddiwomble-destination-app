@@ -13,6 +13,7 @@ $(document).ready(function() {
     };
 
     if (!userData.email || !userData.password) {
+     
       return;
     }
 
@@ -33,6 +34,7 @@ $(document).ready(function() {
         // If there's an error, log the error
       })
       .catch(function(err) {
+        alert("Error")
         console.log(err);
       });
   }
