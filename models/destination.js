@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  const Destinations = sequelize.define("Locations", {
+  let Destination = sequelize.define("Destination", {
     // The email cannot be null, and must be a proper email before creation
     location: {
       type: DataTypes.STRING,
@@ -12,14 +12,14 @@ module.exports = function(sequelize, DataTypes) {
   // Hooks are automatic methods that run during various phases of the User Model lifecycle
   // In this case, before a User is created, we will automatically hash their password
       
-    Destinations.associate = function(models){
-      Destinations.belongsTo(models.user, {
-        foreignKey: {
-          allowNull: false
+   Destination.associate = function(models){
+    Destination.belongsTo(models.User, {
+      foreignKey: {
+       allowNull: false
         }
-      });
-    };
+     });
+   };
 
-  return Destinations;
+  return Destination;
 };
 
