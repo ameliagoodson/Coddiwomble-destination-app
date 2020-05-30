@@ -1,4 +1,30 @@
-form.signup,
+#body-login {
+  background-image: url(./Assets/background1.png);
+  background-size: cover;
+  height: 1vh;
+}
+
 form.login {
   margin-top: 50px;
+}
+
+#body-members {
+  background-image: url(./Assets/background2.png);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-color: #ffda82;
+  background-position: center;
+  height: 100vh;
+
+}
+
+#body-signup {
+  background-image: url(./Assets/background3.png);
+  background-size: cover;
+}
+
+form.signup {
+  margin-top: 50px;
+  background-color: white;
+  
 }

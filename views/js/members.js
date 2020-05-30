@@ -6,6 +6,19 @@ $(document).ready(function(){
   var destinationForm = $("#location-button");
   console.log(destinationInput);
 
+  // Does a post to the signup route. If successful, we are redirected to the members page
+  // Otherwise we log any errors
+  function destinationPost(location) {
+    console.log(location);
+    $.post("/api/destination", {
+      location : location,
+    })
+      .then(function() {
+        window.location.replace("/members");
+        // If there's an error, handle it by throwing up a bootstrap alert
+      });
+  }
+
   // When the signup button is clicked, we validate the email and password are not blank
   destinationForm.on("click", function(event) {
     console.log(destinationInput.val());
@@ -19,18 +32,7 @@ $(document).ready(function(){
 
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
-  // Otherwise we log any errors
-  function destinationPost(location) {
-    console.log(location);
-    $.post("/api/destination", {
-      location : location,
-    })
-      .then(function(data) {
-        window.location.replace("/members");
-        // If there's an error, handle it by throwing up a bootstrap alert
-      });
-  }
+  
 
   $.get("/api/destination").then(function(data){
 

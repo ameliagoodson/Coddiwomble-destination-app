@@ -12,13 +12,13 @@ module.exports = function(sequelize, DataTypes) {
   // Hooks are automatic methods that run during various phases of the User Model lifecycle
   // In this case, before a User is created, we will automatically hash their password
       
-   Destination.associate = function(models){
+  Destination.associate = function(models){
     Destination.belongsTo(models.User, {
       foreignKey: {
-       allowNull: false
-        }
-     });
-   };
+        allowNull: false
+      }
+    });
+  };
 
   return Destination;
 };

@@ -5,6 +5,26 @@ $(document).ready(function() {
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
 
+  // Does a post to the signup route. If successful, we are redirected to the members page
+  // Otherwise we log any errors
+  function handleLoginErr(err) {
+    $("#alert .msg").text(err.responseJSON);
+    $("#alert").fadeIn(500);
+  }
+  
+  function signUpUser(username, email, password) {
+    $.post("/api/signup", {
+      username : username,
+      email: email,
+      password: password
+    })
+      .then(function() {
+        window.location.replace("/members");
+        // If there's an error, handle it by throwing up a bootstrap alert
+      })
+      .catch(handleLoginErr);
+  }
+
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function(event) {
     event.preventDefault();
@@ -24,23 +44,5 @@ $(document).ready(function() {
     passwordInput.val("");
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
-  // Otherwise we log any errors
-  function signUpUser(username, email, password) {
-    $.post("/api/signup", {
-      username : username,
-      email: email,
-      password: password
-    })
-      .then(function(data) {
-        window.location.replace("/members");
-        // If there's an error, handle it by throwing up a bootstrap alert
-      })
-      .catch(handleLoginErr);
-  }
 
-  function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
-  }
 });
