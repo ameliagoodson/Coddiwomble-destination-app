@@ -54,10 +54,11 @@ module.exports = function (app) {
   });
 
   app.post("/api/destination", function (req, res) {
-    console.log(req.user);
     db.Destination.create({
       location: req.body.location,
       UserId: req.user.id,
+    }).then(function(dbDestination){
+      res.json(dbDestination);
     }).catch(function (err) {
       res.status(422).json(err);
     });
