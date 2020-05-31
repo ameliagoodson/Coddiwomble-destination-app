@@ -28,4 +28,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/members.html"));
   });
 
+  app.get("/landing", function(req, res){
+    res.sendFile(path.join(__dirname,"../views/landing.html")); 
+  }); 
+
 };
