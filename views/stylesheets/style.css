@@ -1,3 +1,6 @@
+*, body {
+  font-family: 'Raleway', sans-serif;  
+}
 /*Nav bar*/
 #logo { 
   height: 50px;
@@ -25,6 +28,71 @@ form.login {
   padding: 10px;
   border-radius: 20px;
   background-color: white;
+}
+
+/*Login page button, signup page button*/
+.glow-on-hover {
+  width: 100px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: black;
+  background: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  outline: none !important;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #088680, #71e7d3, #ffdb7d, #feb301, #ff8e95, #ff4762, #c73d4f, #8e2e79);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 50px;
+  outline: none;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+  border: #e7e7e7 3px solid;
+  outline: none !important;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }
 
 /*Members*/
@@ -60,14 +128,48 @@ form.login {
   width: fit-content;
 }
 
-#location-button:hover {
+#location-button {
   background-color: turquoise;
+  width: 60px;
+  height: 40px;
+}
+
+ul.wishlist {
+padding: 0px;
+}
+li {
+  background: linear-gradient(45deg, white, #ffdb7d);
+  list-style-type: none;
+  padding: 2px;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif; 
+  letter-spacing: 4px;
+  height: 30px;
+  vertical-align: middle;
+  border: black solid 2px;
+  margin: 3px;
+  color: black;
+  width: 80%;
+  float: left;
+}
+
+button {
+  background-image: url(./Assets/delete2.png) !important; 
+  background-size: 30px 30px;
+  background-position: center;
+  float: right;
+  height: 30px;
+  width: 30px;
+  border: black solid 2px;
+  margin: 3px;
 }
 
 /* Signup page */
 #body-signup {
   background-image: url(./Assets/background3.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f2f2f2;
 }
 
 form.signup {
@@ -75,5 +177,6 @@ form.signup {
   padding: 10px;
   border-radius: 20px;
   background-color: white;
-
+  overflow-wrap: break-word;
 }
+

@@ -43,13 +43,13 @@ $(document).ready(function(){
     for (let index = 0; index < destinations.length; index++) {
       const destination = destinations[index];
       let list = $("<li>")
+      let deletebtn = $("<button>")
       list.text(destination.location)
+      deletebtn.text("");
+      // deletebtn.classList.add(".deletebtn") -- Why is this not working??
       $(ul).append(list)
-
-      
+      $(ul).append(deletebtn)
     }
-
-    
   })
 
   $.get("/api/user_data").then(function(data) {
