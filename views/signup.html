@@ -5,12 +5,14 @@
   <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body id="body-signup">
   <nav class="navbar navbar-default">
+    <img id="logo" src="./stylesheets/Assets/logo.png"> <p id="logo-text">Coddiwomble</p> 
     <div class="container-fluid">
       <div class="navbar-header">
       </div>
@@ -19,8 +21,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
         <form class="signup">
+          <h2>Sign Up Form</h2>
           <div class="form-group">
             <label for="exampleInputName1">Username</label>
             <input type="username" class="form-control" id="username-input" placeholder="Username">
@@ -37,10 +39,11 @@
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
           </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
+          <button type="submit" class="btn btn-default">Sign Up</button><br><br>
+          <p>Or log in <a href="/login">here</a></p>
         </form>
         <br />
-        <p>Or log in <a href="/login">here</a></p>
+        
       </div>
     </div>
   </div>
