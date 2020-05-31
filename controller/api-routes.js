@@ -92,5 +92,20 @@ module.exports = function (app) {
     });
   });
 
+  
+  //Get route for returning user posts to landing page. 
+  app.get("/api/landing", function (req, res) {
+    var query = {};
+    if (req.query.username) {
+      query.username = req.query.username;
+    }
+    db.Destination.findAll({
+      where: query,
+      include: [db.User]
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
 
 };
