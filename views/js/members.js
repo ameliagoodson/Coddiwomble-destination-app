@@ -46,7 +46,8 @@ $(document).ready(function(){
       let deletebtn = $("<button>")
       list.text(destination.location)
       deletebtn.text("");
-      // deletebtn.classList.add(".deletebtn") -- Why is this not working??
+      deletebtn.addClass("deletebtn")
+      list.addClass("wishlist-list")
       $(ul).append(list)
       $(ul).append(deletebtn)
     }
