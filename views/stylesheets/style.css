@@ -99,8 +99,10 @@ form.login {
   100% { background-position: 0 0; }
 }
 
-#signup-text {
+#signup-link-text {
   margin-top: 5px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 /*Members*/
@@ -125,16 +127,125 @@ form.login {
   background-color: white;
 }
 
-#welcome {
+#welcome, #member-name {
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
 
+#welcome, #member-name:hover {
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+.animate {
+	font-size: 20px;
+
+}
+
+.animate span {
+	display: inline-block;
+}
+
+.animate span:nth-of-type(2) {
+	animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+	animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+	animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+	animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+	animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+	animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+	animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+	animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+	animation-delay: .45s;
+}
+.animate span:nth-of-type(11) {
+	animation-delay: .5s;
+}
+.animate span:nth-of-type(12) {
+	animation-delay: .55s;
+}
+.animate span:nth-of-type(13) {
+	animation-delay: .6s;
+}
+.animate span:nth-of-type(14) {
+	animation-delay: .65s;
+}
+.animate span:nth-of-type(15) {
+	animation-delay: .7s;
+}
+.animate span:nth-of-type(16) {
+	animation-delay: .75s;
+}
+.animate span:nth-of-type(17) {
+	animation-delay: .8s;
+}
+.animate span:nth-of-type(18) {
+	animation-delay: .85s;
+}
+.animate span:nth-of-type(19) {
+	animation-delay: .9s;
+}
+.animate span:nth-of-type(20) {
+	animation-delay: .95s;
+}
+
+/* Animation*/
+.three span {
+	color: #8e2e79;
+	opacity: 0;
+	transform: translate(-300px, 0) scale(0);
+	animation: sideSlide .5s forwards;
+}
+
+@keyframes sideSlide {
+	60% {
+		transform: translate(20px, 0) scale(1);
+		color: #8e2e79;
+	}
+
+	80% {
+		transform: translate(20px, 0) scale(1);
+		color: #71e7d3;
+	}
+
+	99% {
+		transform: translate(0) scale(1.2);
+		color: #ff4762;
+	}
+
+	100% {
+		transform: translate(0) scale(1);
+		opacity: 1;
+		color: #8e2e79;
+	}
+}
+/**/
+
 #location-input {
   margin-left: 4px;
   height: 30px;
   width: 300px;
+}
+
+#location-input:hover {
+  height: 33px;
+  width: 310px;
 }
 
 #location-button {
@@ -162,6 +273,11 @@ padding: 0px;
   width: 80%;
   float: left;
 }
+
+.wishlist-list:hover {
+  width: 81%;
+  height: 37px;
+ }
 
 .deletebtn {
   background-image: url(./Assets/delete4.png) !important; 
@@ -200,12 +316,55 @@ padding: 0px;
   background-color: #f2f2f2;
 }
 
+#username-input:hover, #email-input:hover, #password-input:hover {
+  height: 40px;
+}
+
+#signup-text, #login-text {
+  font-weight: 700;
+  margin-top: -5px;
+}
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+ @-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 form.signup {
   margin: 50px;
   padding: 10px;
   border-radius: 20px;
   background-color: white;
   overflow-wrap: break-word;
+}
+
+form.signup:hover {
+  padding: 15px;
 }
 
 @media only screen and (max-width: 416px) {
@@ -220,17 +379,37 @@ form.signup {
     width: 350px;
   }
 }
+@media only screen and (max-width: 700px) {
+  #location-input:hover {
+    width: 360px;
+    height: 37px
+  }
+}
 
 @media only screen and (max-width: 600px) {
   #location-input {
     width: 250px;
   }
 }
+@media only screen and (max-width: 600px) {
+  #location-input:hover {
+    width: 260px;
+    height: 37px
+  }
+}
+
 @media only screen and (max-width: 500px) {
   #location-input {
     width: 200px;
   }
-}
+
+
+  @media only screen and (max-width: 500px) {
+    #location-input:hover {
+      width: 210px;
+      height: 37px
+    }
+  }}
 
 
 

@@ -199,4 +199,10 @@
     margin-top: -270px;
   }
 }
+
+@media only screen and (max-width: 460px) {
+  .wordCarousel {
+    display: none;
+  }
+ }
 /*# sourceMappingURL=main.css.map */
