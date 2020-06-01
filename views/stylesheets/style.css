@@ -2,9 +2,13 @@
   font-family: 'Raleway', sans-serif;  
 }
 /*Nav bar*/
+nav {
+  height: 55px;
+}
+
 #logo { 
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   display: inline;
 }
 
@@ -95,6 +99,10 @@ form.login {
   100% { background-position: 0 0; }
 }
 
+#signup-text {
+  margin-top: 5px;
+}
+
 /*Members*/
 #body-members {
   background-image: url(./Assets/background2.png);
@@ -124,27 +132,29 @@ form.login {
 }
 
 #location-input {
-  margin-right: 10px;
-  width: fit-content;
+  margin-left: 4px;
+  height: 30px;
+  width: 300px;
 }
 
 #location-button {
-  background-color: turquoise;
   width: 60px;
-  height: 40px;
+  height: 35px;
+  margin-bottom: 5px;
+  margin-top: 2px;
 }
 
 ul.wishlist {
 padding: 0px;
 }
-li {
+.wishlist-list {
   background: linear-gradient(45deg, white, #ffdb7d);
   list-style-type: none;
   padding: 2px;
   font-size: 16px;
   font-family: 'Raleway', sans-serif; 
   letter-spacing: 4px;
-  height: 30px;
+  height: 35px;
   vertical-align: middle;
   border: black solid 2px;
   margin: 3px;
@@ -160,9 +170,26 @@ li {
   float: right;
   height: 30px;
   width: 30px;
-  margin: 3px;
+  margin-top: 3px;
+  margin-right: 10px;
   outline: none;
   border: none;
+  padding: 5px;
+}
+
+.deletebtn:hover {
+  background-image: url(./Assets/delete4purple.png) !important;
+  background-size: 35px 35px;
+  height: 35px;
+  width: 35px;
+  float: right; 
+}
+
+@media only screen and (max-width: 416px) {
+  .deletebtn {
+    margin-right: 0px;
+    margin-top: 5px;
+  }
 }
 
 /* Signup page */
@@ -180,5 +207,30 @@ form.signup {
   background-color: white;
   overflow-wrap: break-word;
 }
+
+@media only screen and (max-width: 416px) {
+  form.signup {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #location-input {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #location-input {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #location-input {
+    width: 200px;
+  }
+}
+
 
 
