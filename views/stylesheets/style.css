@@ -153,15 +153,16 @@ li {
   float: left;
 }
 
-button {
-  background-image: url(./Assets/delete2.png) !important; 
+.deletebtn {
+  background-image: url(./Assets/delete4.png) !important; 
   background-size: 30px 30px;
   background-position: center;
   float: right;
   height: 30px;
   width: 30px;
-  border: black solid 2px;
   margin: 3px;
+  outline: none;
+  border: none;
 }
 
 /* Signup page */
