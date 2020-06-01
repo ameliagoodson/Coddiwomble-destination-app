@@ -82,12 +82,12 @@ module.exports = function (app) {
     }
   });
 
-  app.delete("/api/destination", function(req, res) {
+  app.delete("/api/destination/:id", function(req, res) {
     db.Destination.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbDestination) {
+    }).then(function(dbDestination) { //do i put the members function here??
       res.json(dbDestination);
     });
   });
