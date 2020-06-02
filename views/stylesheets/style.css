@@ -415,5 +415,57 @@ form.signup:hover {
 
 /* For the landing page. basic */ 
 .blog-container {
-  margin-top: 30px;
+  margin: 30px;
+  border-radius: 30px;
+  width: 60vw;
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+#text-user {
+  font-size: 30px;
+}
+
+.text-author {
+  font-size: 25px;
+}
+
+.user {
+  color: #8e2e79;
+}
+
+#background-feed {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+#body-landing {
+  background-color: #f3f3f3;
+}
+
+@media only screen and (max-width: 700px) {
+  #text-user {
+    font-size: 27px;
+  }
+  
+  .text-author {
+    font-size: 22px;
+  }
+  .blog-container {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #text-user {
+    font-size: 25px;
+  }
+  
+  .text-author {
+    font-size: 20px;
+  }
+  .blog-container {
+    width: 90vw;
+  }
 }
