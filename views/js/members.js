@@ -3,7 +3,7 @@ $(document).ready(function(){
   // and updates the HTML on the page
 
   var destinationInput = $("#location-input");
-  var destinationForm = $("#location-button");
+  var destinationForm = $("#location-button"); 
   
   //console.log(destinationInput);
 
