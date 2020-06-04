@@ -1,5 +1,5 @@
 # Coddiwomple
-![Coddiwomple](/README_pictures/coddiwomble-logo.jpeg)
+![Coddiwomple](https://github.com/ameliagoodson/Project-2/blob/master/README_pictures/Coddiwomble-logo.jpeg)
 
 ## Table of Contents
 1. [Description](#DescriptionoftheApp)
@@ -17,18 +17,18 @@ URL link:
 
 Below is are screenshots of each page. 
 ### Sign up 
-![Sign up](/README_pictures/coddiwomble-signup.jpeg)
+![Sign up](https://github.com/ameliagoodson/Project-2/blob/master/README_pictures/Coddiwomble-signup.jpeg)
 
 ### Login 
-![Login](/README_pictures/coddiwomble-login.jpeg)
+![Login](https://github.com/ameliagoodson/Project-2/blob/master/README_pictures/Coddiwomble-login.jpeg)
 
 ### Members
 This page allows users to create their own destination wish-list.
-![Members](/README_pictures/coddiwomble-members-page.jpeg)
+![Members](https://github.com/ameliagoodson/Project-2/blob/master/README_pictures/Coddiwomble-members-page.jpeg)
 
 ### NewsFeed
 Displays members names and destination users want to travel too. Users can view which other members wish to travel to that particular destination. 
-![Newsfeed](/README_pictures/coddiwomble-newsfeed.jpeg)
+![Newsfeed](https://github.com/ameliagoodson/Project-2/blob/master/README_pictures/Coddiwomble-newsfeed.jpeg)
 
 ## Technologies:
 * HTML/CSS/Bootstrap/Sass
