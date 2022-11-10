@@ -1,5 +1,5 @@
-# Coddiwomple
-![Coddiwomple](https://github.com/ameliagoodson/Project-2/blob/master/README_pictures/Coddiwomble-logo.jpeg)
+# Coddiwomble
+![Coddiwomble](https://github.com/ameliagoodson/Project-2/blob/master/README_pictures/Coddiwomble-logo.jpeg)
 
 ## Table of Contents
 1. [Description](#DescriptionoftheApp)
